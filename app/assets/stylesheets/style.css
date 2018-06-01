@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Gotham,gotham,Verdana,sans-serif;
+    /* background-color: slateblue; */
+}
+.wrapper {
+   width: 100%;
+   height:auto;
+   /* background-color: tomato; */
+
+}
+.errors{
+    color: red;
+    font-size: 30px;
+}
+
+.hero-image img {
+    width: 1675px;
+    height: 500px;
+    border: 10px solid black;
+    
+}
+.hero-menu{
+    
+}
+.middle-content{
+    width: 100%;
+    display: inline-block;
+}
+.bottom-content{
+  
+}
+.middle-content h3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+     font-size: 1.4em;
+    height: 25px;
+   
+}
+.featured{
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 75px;
+    text-align: center;
+}
+.header{
+    font-family: Gotham,gotham,Verdana,sans-serif;
+    height: 75px;
+}
+.left-header h1{
+    font-size: 50px;
+    display:inline-block;
+    position: absolute;
+    margin: 2px 0px 0px 30px;
+}
+.left-header a {
+    color: black;
+    text-decoration: none;
+}
+.right-header {
+    display: inline-block;
+    margin-left: 350px;
+    position: absolute;
+    margin-top: 13px;
+
+}
+.right-header ul{
+    text-decoration: none;
+   
+}
+.right-header li{
+   list-style-type: none;
+   display: inline-block;
+   margin: 15px;
+}
+.right-header a{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    position: absolute;
+  width: 600px;
+  height: 300px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -190px 0 0 -300px;
+  background: darkgrey;
+  opacity: 0.8;
+}
+.menu h2{
+    color: black;
+    opacity: 1.3;
+    text-align: center;
+    font-size: 1.9em;
+}
+.menu a {
+    opacity: 1.3;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    opacity: 1.3;
+    display: inline-block;
+    position: relative;
+    padding: 20px 38px;
+    top: 0;
+    font-size: 30px;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
+    background: rgba( 22, 230, 137, 1 );
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+    
+    -webkit-transform: translateZ(0);
+       -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+            transform: translateZ(0);
+    
+    -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            margin: 100px 0 0 103px;
+  }
+  
+  .menu a:hover {
+    top: -10px;
+    box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+    
+    -webkit-transform: rotateX(20deg);
+       -moz-transform: rotateX(20deg);
+        -ms-transform: rotateX(20deg);
+            transform: rotateX(20deg);
+  }
+  
+  .menu a:active {
+    top: 0px;
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+    background: rgba( 20, 224, 133, 1 );
+  }
+  
+.show-info img{
+    align-content: center;
+     margin-left: 205px;
+    margin-top: 15px;
+    margin-bottom: 20px; 
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 175px;
+    border: 8px solid black;
+}
+.home{
+    padding-bottom: 8px;
+    /* border: 2px solid black; */
+    margin: 15px;
+    text-align: center;
+}
+  .home-div{
+      padding: 5px;
+      width: 40%;
+      height: 165px;
+      display: inline-block;
+      border: 2px solid black;
+      margin: 25px 20px 25px 75px;
+  }
+  .home-div h3{
+      color: black;
+      height: auto;
+      background-color: salmon;
+  }
+  .home-div p{
+      padding: 5px;
+  }
+  .home-div img{
+      margin-top: 5px;
+    height: 140px;
+    width: 157px;
+    float: right;
+  }
+  .display h6{
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .user-content h2{
+      padding: 15px;
+      margin-top: 10px;
+      margin-left:15px;
+  }
+  .user-content p{
+      margin-left: 30px;
+      margin-top: 10px;
+  }
+  .user-content a {
+      margin-left: 5%;
+      margin-top: 15px;
+    opacity: 1.3;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    top: 0;
+    font-size: 20px;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
+    background: rgba( 22, 230, 137, 1 );
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+
+  }
+.user-content{
+    display: inline-block;
+}
+  .comm-liked{
+      margin-left: 10%;
+      margin-top: 5%;
+      vertical-align: top;
+    display: inline-block;
+  }
+
+  .dallas-homes{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home_img{
+      width: 400px;
+      height: 225px;
+  }
+ .ind_img{
+     width: 250px;
+     height: 170px;
+ }
+.featured p{
+    padding: 10px;
+}
+
+.footer{
+    height: 200px;
+}
+.footer h3{
+   padding-top: 10px;
+   padding-left: 10px;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer p{
+    padding-left: 10px;
+
+}
+.span{
+    margin-top: 25px;
+    font-size: .8em;
+    text-align: center;
+    position: absolute;
+    margin-left: 45%;
+}
+.span p{
+    font-size: .8em;
+}
+.coming-soon{
+    text-align:center;
+    margin-bottom: 20px;
+}

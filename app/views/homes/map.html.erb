@@ -1,0 +1,36 @@
+<% content_for :map_head do %>
+  <style>
+       #map {
+           margin: 0 auto;
+        height: 400px;
+        width: 75%;
+        padding: 10px;
+       }
+       .view {
+           margin-left:10px;
+           padding:10px;
+       }
+  </style>
+<%end%>
+
+<% content_for :map_content do %>
+    <h1 class="view">View Communities</h1>
+    <h1 class="coming-soon">Coming Soon!!</h1>
+    <div id="map"></div>
+   
+      <script>
+          function initMap() {
+            var uluru = {lat: 32.7767, lng: -96.7970};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 10,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyP2Jodyzkuh1EnDxh7nmngf3dgC_5yc4&callback=initMap">
+      </script>
+  <%end%>

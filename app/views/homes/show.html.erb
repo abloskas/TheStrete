@@ -1,0 +1,40 @@
+<% content_for :homes_content do %>
+<body>
+    <div class="wrapper">
+        <div class="show-info center-block">
+        <%= image_tag("new_home_dallas_banner.jpg", :class => "img-responsive img-center") %>
+        </div>
+        <div class="display">
+            <h6>Displaying <%=@home.count%> communities</h6>
+        </div>
+        <div class="dallas-homes container">
+            <div class="row align-items-start">
+                <%@home.each do |h|%>
+                <div class="col home border border-secondary rounded">
+                    <h5><%=h.community%></h5>
+                    <img class="home_img" src="<%=h.img%>"></img>
+                    <p><%=h.price%></p>
+                    <p><%=h.location%></p>
+                    <% if is_logged_in %>
+                        <% if current_user.communities_liked.exists?(h.id) %>
+                            <form action="/likes/<%= h.id %>" method="post">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="hidden" name="_method" value="delete">
+                                <input class="btn btn-secondary" type="submit" value="Unlike">
+                            </form>  
+                        <% else %> 
+                            <form action="/likes" method="post">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="hidden" name="community_id" value="<%=h.id%>">
+                                <input class ="btn btn-warning" type="submit" value="Like">
+                            </form>
+                        <% end %>   
+                    <% else %>    
+                    <h6>Please <a href="/users">login or register</a> to Like this community!</h6>
+                    <% end %>     
+                </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+<%end%>

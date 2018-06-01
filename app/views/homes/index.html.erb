@@ -1,0 +1,49 @@
+<% content_for :index_content do %>
+    <div class="hero-image">
+        <%= image_tag("hero_image.jpg") %> 
+    </div>
+    <div class="hero-menu">
+        <div class="menu">
+            <h2>Find your Dream Home</h2>
+            <a href="/homes/show">Start Your Home Search</a>
+        </div>
+    </div>
+       <div class="container">
+    <div class="middle-content row align-items-start">
+         <h3>Featured Communities in Dallas, TX</h3>
+            <% @homes.each do |home| %>
+                <div class="featured col-sm-3 border border-light rounded">
+                <img class="ind_img" src="<%=home.img%>"></img>
+                    <p><%= home.community %></p>
+                    <p><a href="/homes/show">Visit this community</a></p>
+                </div>
+            <%end%>
+       
+    </div>
+        
+    <!-- <div class="bottom-content">
+        <div class="row">
+            <div class="col border border-secondary rounded">
+                <p>HELLO</p>
+            </div>
+            <div class="col border border-secondary rounded">
+                    <p>WORLD</p>
+                </div>
+      </div>
+    </div> -->
+        
+
+</div>
+    <footer class="footer navbar-fixed-bottom text-white bg-dark">
+        <h3><a href="/homes">TheStrete</a></h3>
+        <p>Dallas' premier new home search</p>
+        <p></p>
+        <div class="span">
+            <h5>TheStrete.com</h5>
+            <p><a href="mailto:a.bloskas@yahoo.com">Contact</a></p>
+        </div>
+    </footer>
+
+
+<%end%>
+

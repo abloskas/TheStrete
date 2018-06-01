@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%= stylesheet_link_tag "style.css" %>
+    <%= yield :map_head%>
+ 
+    <title>TheStrete</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="left-header">
+                <h1><a href="/">TheStrete</a></h1>
+                <div class="right-header">
+                    <ul>
+                        <li><a href="/homes/show">Dallas Communities</a></li>
+                        <li><a href="/homes/map">Map Search</a></li>
+                        <% if current_user %>
+                            <li><a href="/users/<%=current_user.id%>"><%=current_user.first_name%>'s Profile</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        <%else%>
+                            <li><a href="/users">Login</a></li>
+                        <%end%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+                <%= yield :map_content%>
+        </div>
+    </div>
+    <%= yield%>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<% content_for :users_show_content do %>
+    <div class="wrapper">
+        <div class="user-content">
+            <h2><%=current_user.first_name%> <%=current_user.last_name%></h2>
+            <p>Phone: <%=current_user.phone%></p>
+            <p>Email: <%=current_user.email%></p>
+            <a href="">Edit Profile</a>
+        </div>
+        <div class="comm-liked">
+            <h3>Communities Liked:</h3>
+            <%if @user.communities_liked.exists? %>
+            <%@user.communities_liked.each do |community|%>
+                    <p><%=community.community%></p>
+            <%end%>
+            <%else%>
+                    <p>You haven't liked any <a href="/homes/show">communities</a> yet!</p>
+            <%end%>
+        </div>
+    </div>
+<%end%>

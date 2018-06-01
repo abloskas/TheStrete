@@ -1,0 +1,33 @@
+<% content_for :login_stylesheet do %>
+    <%= stylesheet_link_tag "login_style.css" %>
+<%end%>
+<% content_for :users_content do %>
+    <div class="main" style="width:970px; margin: 0 auto; text-align:center;">
+    <br>
+    <br>
+    <br>
+        <div class="form">
+            <h2>Register</h2>
+            <br>
+            <form class="login-form" action="/users/create" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+               <input type="text" placeholder="First Name" name="user[first_name]">
+              <input type="text" placeholder="Last Name" name="user[last_name]">
+               <input type="text" placeholder="Email" name="user[email]">
+              <input type="text" placeholder ="Phone Number" name="user[phone]">
+              <input type="password" placeholder="Password" name="user[password]">
+                <input class="button" type="submit" value="Register">
+            </form>
+        </div>
+        <div class="form">
+            <h2>Login</h2>
+            <br>
+            <form class="login-form" action="/users/login" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+            <input type="text" placeholder="email" name="email"/>
+            <input type="password" placeholder="password" name="password"/>
+            <input class="button" type="submit" value ="Login">
+            </form>
+        </div>
+    </div>
+<%end%>
