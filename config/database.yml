@@ -14,12 +14,12 @@
 # # Configure Using Gemfile
 # # gem 'pg'
 # #
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   # For details on connection pooling, see rails configuration guide
-#   # http://guides.rubyonrails.org/configuring.html#database-pooling
-#   pool: 5
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
 
 # development:
 #   <<: *default
@@ -78,11 +78,11 @@
 # #   production:
 # #     url: <%= ENV['DATABASE_URL'] %>
 # #
-# production:
-#   <<: *default
-#   database: RailsScraper_production
-#   username: RailsScraper
-#   password: <%= ENV['RAILSSCRAPER_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: RailsScraper_production
+  username: alphauser
+  password: <%= ENV['RAILSSCRAPER_DATABASE_PASSWORD'] %>
 
 
  development:
